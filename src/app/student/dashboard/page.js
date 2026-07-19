@@ -137,7 +137,7 @@ export default async function StudentDashboardPage() {
           <Card>
             <CardHeader>
               <CardTitle>Average score by need</CardTitle>
-              <CardDescription>Same 30-day data, as a bar chart.</CardDescription>
+              <CardDescription>Previous 30-day data, as a bar chart.</CardDescription>
             </CardHeader>
             <CardContent>
               <NeedBarChart data={barData} />

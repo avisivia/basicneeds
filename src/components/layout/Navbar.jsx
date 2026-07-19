@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import { UserMenu } from "./UserMenu";
 import { dashboardPathForRole } from "@/lib/constants";
+import Image from "next/image";
 
 export function Navbar({ profile }) {
   return (
@@ -10,7 +11,16 @@ export function Navbar({ profile }) {
         href={dashboardPathForRole(profile.role)}
         className="text-sm font-semibold"
       >
-        Basic Needs Tracker
+        <div className="flex items-center gap-2">
+          <Image
+            src="/logo.png"
+            alt="Logo"
+            width={25}
+            height={25}
+            className="mx-auto"
+          />
+          <div className="text-sm font-semibold">Basic Needs Tracker</div>
+        </div>
       </Link>
       <UserMenu profile={profile} />
     </header>
