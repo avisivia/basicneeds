@@ -63,9 +63,14 @@ export default async function TeacherStudentDetailPage({ params }) {
 
           <InsightsList insights={insights} />
 
-          <div className="flex flex-col gap-4">
-            {sessions.map((session) => (
-              <ReflectionCard key={session.id} session={session} />
+          <div className="flex flex-col gap-3">
+            {sessions.map((session, index) => (
+              <ReflectionCard
+                key={session.id}
+                session={session}
+                collapsible
+                defaultOpen={index === 0}
+              />
             ))}
           </div>
         </>
